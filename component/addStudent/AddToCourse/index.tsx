@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Router from "next/router";
 
 import styles from "./AddToCourse.module.scss";
-import { DetailsProps, IAddProps } from "../../../types/types";
+import { IAddProps } from "../../../types/types";
 import ModalWrapper from "../modal";
 
 const AddToCourse = ({ course }: IAddProps): JSX.Element => {
