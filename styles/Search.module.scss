@@ -1,0 +1,23 @@
+.search {
+  height: 30vh;
+  .search__box {
+    width: 500px;
+    .search__input,
+    .search__button {
+      border-radius: 60px;
+    }
+
+    .search__input_label {
+      color: #757575;
+      font-size: 0.9rem;
+      padding-left: 30px;
+    }
+    .search__button {
+      background-color: var(--primary-color);
+      color: var(--tertiary-text-color);
+      width: 90px;
+      display: flex;
+      justify-content: center;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.enrollment {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  color: var(--primary-text-color);
+  margin: 20px;
+  .enrollment__message {
+    width: 100%;
+    background-color: var(--secondary-color);
+  }
+  .enrollment__text {
+    color: var(--secondary-text-color);
+  }
+  .enrollment__button {
+    background-color: var(--primary-color);
+    color: var(--tertiary-text-color);
+    border-radius: 50px;
+    border: none;
+    height: 50px;
+    font-weight: 550;
+  }
+}
