@@ -3,6 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import AddToCourse from "../component/addStudent/AddToCourse";
 import Survey from "../component/survey";
 import styles from "../styles/Details.module.scss";
+import {DetailsProps} from "../types/types";
 
 export interface ICourse {
   capacity: number;
@@ -35,17 +36,17 @@ export interface LessonInfo {
   description: string;
   image: string;
 }
-export interface DetailsProps {
-  teacher: TeacherInfo;
-  students: StudentInfo;
-  lesson: LessonInfo;
-  cost: string;
-  _id: string;
-  title: string;
-  capacity: string;
-  endDate: string;
-  startDate: string;
-}
+// export interface DetailsProps {
+//   teacher: TeacherInfo;
+//   students: StudentInfo;
+//   lesson: LessonInfo;
+//   cost: string;
+//   _id: string;
+//   title: string;
+//   capacity: string;
+//   endDate: string;
+//   startDate: string;
+// }
 interface Props {
   Details: DetailsProps;
 }
@@ -108,7 +109,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const res = await fetch(
-    `http://querateam1.herokuapp.com/api/course/${params.id}`
+    `http://querateam1.herokuapp.com/api/course/${params?.id}`
   );
   const course = await res.json();
   const Details = course.result;

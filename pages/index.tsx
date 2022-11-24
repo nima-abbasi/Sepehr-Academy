@@ -11,7 +11,6 @@ import ContactUsForm from "../components/Footer/contactUs"
 export default function Home() {
   return (
     <div className="container">
-    <LoginForm/>
     </div>
   )
 }

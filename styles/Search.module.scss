@@ -1,7 +1,8 @@
 .search {
   height: 30vh;
   .search__box {
-    width: 500px;
+    width: 40%;
+    min-width: 300px;
     .search__input,
     .search__button {
       border-radius: 60px;
@@ -15,7 +16,8 @@
     .search__button {
       background-color: var(--primary-color);
       color: var(--tertiary-text-color);
-      width: 90px;
+      width: 15%;
+      min-width: 50px;
       display: flex;
       justify-content: center;
     }
