@@ -1,17 +1,18 @@
-//import Head from 'next/head'
-//import Image from 'next/image'
-//import styles from '../styles/Home.module.css'
-import RegisterForm from "../components/register/register"
+
+import RegisterForm from "../component/register/register"
 import "bootstrap/dist/css/bootstrap.min.css"
-import ResetPassWordForm from "../components/login/resetPassword/resetPassword"
-import LoginForm from "../components/login/login/login"
-import AllCoursesDisplay from "../components/Allcourses/AllcoursesDisplay"
-import ContactUsForm from "../components/Footer/contactUs"
+import ResetPassWordForm from "../component/login/resetPassword/resetPassword"
+import LoginForm from "../component/login/login/login"
+import AllCoursesDisplay from "../component/Allcourses/AllcoursesDisplay"
+import ContactUsForm from "../component/Footer/contactUs"
 
 export default function Home() {
   return (
-    <div className="container">
-    <LoginForm/>
+    <>
+      <div className="container">
+      <LoginForm/>
     </div>
+    </>
+    
   )
 }

@@ -1,9 +1,9 @@
 import { CourseProps} from "../../types/types"
 import { LikeCountInfo } from "../../types/types"
 import LikeCountAPI from "../../pages/api/likeCountAPI/likeAPI"
-import { useState, useEffect } from "react"
-import likeImg from "../../assets/images/like.png"
-import dislikeImg from "../../assets/images/dislike.png"
+import { useState} from "react"
+import likeImg from "../../public/like.png"
+import dislikeImg from "../../public/dislike.png"
 
 const AddCourse: React.FC<CourseProps> = ({
   description,
