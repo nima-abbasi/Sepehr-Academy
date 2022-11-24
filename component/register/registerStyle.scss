@@ -1,0 +1,12 @@
+$genericColor1: #2980b9;
+$genericColor2: #2c3e50;
+
+.register{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+button{
+    background_color: genericColor1;
+}

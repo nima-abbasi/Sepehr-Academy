@@ -1,8 +1,7 @@
 import Axios from 'axios'
-const API_URL = "http://querateam1.herokuapp.com/api/";
+import { URL } from '../url';
 
 const AllCoursesAPI = () =>
-  Axios.get(API_URL + 'course/getall')
- 
- 
-  export default AllCoursesAPI
+  Axios.get(`${URL}course/getall`)
+
+export default AllCoursesAPI
