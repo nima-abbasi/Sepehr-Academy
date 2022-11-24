@@ -1,0 +1,13 @@
+.button {
+  cursor: pointer;
+  color: var(--tertiary-text-color);
+  background-color: var(--primary-color);
+  box-shadow: 0 0 0 0 rgb(34 36 38 / 15%) inset;
+  min-width: 10em;
+  max-width: 16rem;
+  font-weight: 600;
+  &:hover {
+    background-color: var(--tertiary-color);
+    color: var(--tertiary-text-color);
+  }
+}

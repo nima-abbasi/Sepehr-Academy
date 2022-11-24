@@ -1,0 +1,109 @@
+$breakpoint-tablet: 1024px;
+
+.navbar {
+  position: fixed;
+  top: 0;
+  padding: 30px;
+  width: 100%;
+  height: 80px;
+  background-color: var(--tertiary-text-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .navbar__left {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    .navbar__logo {
+      filter: invert(40%) sepia(74%) saturate(483%) hue-rotate(160deg)
+        brightness(97%) contrast(93%);
+    }
+    .navbar__link {
+      font-weight: 600;
+      color: var(--secondary-text-color);
+    }
+    .navbar__links {
+      display: flex;
+      gap: 30px;
+
+      .navbar__link {
+        font-weight: 600;
+        color: var(--secondary-text-color);
+      }
+      .navbar__item {
+        position: relative;
+        &::after {
+          content: "";
+          position: absolute;
+          height: 3px;
+          width: 0;
+          left: 0;
+          bottom: -10px;
+          background: var(--tertiary-color);
+        }
+        &:hover::after {
+          color: var(--tertiary-color);
+          width: 100%;
+        }
+      }
+      .navbar__burger_close {
+        cursor: pointer;
+        display: none;
+        &:hover {
+          color: var(--primary-color);
+        }
+        @media screen and (max-width: $breakpoint-tablet) {
+          display: block;
+        }
+      }
+      @media screen and (max-width: $breakpoint-tablet) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: var(--tertiary-text-color);
+        transition: 1s;
+        transform: translateY(-100vh);
+        z-index: 2;
+      }
+    }
+    .navbar__responsive {
+      transform: none;
+    }
+
+    .navbar__burger {
+      border: none;
+      background-color: transparent;
+      display: none;
+      &:hover {
+        color: var(--primary-color);
+      }
+      @media screen and (max-width: $breakpoint-tablet) {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+    }
+  }
+  .navbar__login {
+    padding: 8px 30px;
+    background-color: var(--primary-color);
+    color: var(--tertiary-text-color);
+    border-radius: 40px;
+    &:hover {
+      background-color: var(--tertiary-color);
+    }
+  }
+  .navbar__account {
+    font-weight: 500;
+    padding: 5px 15px;
+    color: var(--secondary-text-color);
+    border: 1px solid var(--secondary-text-color);
+    border-radius: 50px;
+  }
+}
