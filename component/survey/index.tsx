@@ -69,9 +69,9 @@ const Survey = (detailI: any) => {
 
   return (
     <>
-      <div className={styles.btn_container}>
+      <div className={styles.btnContainer}>
         <button
-          className={`btn ${activeBtn === "like" ? "like-active" : ""}`}
+          className={`btn ${activeBtn === "dislike" ? "dislike-active" : ""}`}
           onClick={handleLikeClick}
         >
           <span className="material-symbols-rounded">

@@ -1,5 +1,6 @@
 import { GetStaticPaths, GetStaticProps } from "next";
 import { Container, Row, Col } from "react-bootstrap";
+import AddToCourse from "../component/addStudent/AddToCourse";
 import Survey from "../component/survey";
 import styles from "../styles/Details.module.scss";
 
@@ -57,9 +58,9 @@ const CoursDetail = ({ Details }: Props) => {
   return (
     <>
       <Container className={styles.contain}>
-        <Row className={styles.title_course} key={id}>
-          <Col className={styles.first_title}>
-            <h1 className={styles.course_name}>{result.title}</h1>
+        <Row className={styles.titleCourse} key={id}>
+          <Col className={styles.firstTitle}>
+            <h1 className={styles.courseName}>{result.title}</h1>
             <br></br>
             <p>{lesson.lessonName}</p>
             <p>{lesson.description}</p>
@@ -72,15 +73,14 @@ const CoursDetail = ({ Details }: Props) => {
             <h6>One-Time Payment</h6>
             <span>{result.cost}$</span>
             <br />
-
-            {/* <AddToCourse /> */}
+            <AddToCourse course={Details} />
           </Col>
-          <Col className={styles.second_title}>
+          <Col className={styles.secondTitle}>
             <h1>{lesson.image}</h1>
           </Col>
         </Row>
       </Container>
-      <Container className={styles.second_container}>
+      <Container className={styles.secondContainter}>
         <Row>
           <Col>
             <h2>Course professors</h2>
