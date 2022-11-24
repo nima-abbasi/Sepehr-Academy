@@ -4,7 +4,7 @@ import { Search } from "@emotion-icons/boxicons-regular/Search";
 
 import styles from "../styles/Search.module.scss";
 import { DetailsProps, IResultProps } from "../types/types";
-// import AllCoursesAPI from "../api/services/AllcoursesAPI";
+import AllCoursesAPI from "./api/AllCoursesAPI/AllcoursesAPI";
 
 const SearchBox = ({ setResult }: IResultProps): JSX.Element => {
   const [searchInput, setSearchInput] = useState<string>("");

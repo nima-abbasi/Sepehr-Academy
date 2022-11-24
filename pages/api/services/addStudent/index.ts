@@ -1,6 +1,6 @@
 import Axios from "axios";
 
-import { URL } from "../../siteURL/siteURL";
+import { URL } from "../../url";
 import { Auth } from "../../Auth";
 
 export const AddStudentToCourse = (
