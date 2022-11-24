@@ -4,11 +4,10 @@ import { useState } from "react";
 import { AiTwotoneLike, AiTwotoneDislike } from "react-icons/ai";
 import styles from "./survey.module.scss";
 
-const Survey = (detailI: any) => {
+const Survey = (detailId: any) => {
   const [likeCount, setLikeCount] = useState(0);
   const [dislikeCount, setDislikeCount] = useState(0);
   const [activeBtn, setActiveBtn] = useState("none");
-  console.log(detailI.detailId);
 
   const handleLikeClick = () => {
     axios

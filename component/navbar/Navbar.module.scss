@@ -21,6 +21,7 @@ $breakpoint-tablet: 1024px;
     .navbar__link {
       font-weight: 600;
       color: var(--secondary-text-color);
+      text-decoration: none;
     }
     .navbar__links {
       display: flex;
@@ -29,6 +30,7 @@ $breakpoint-tablet: 1024px;
       .navbar__link {
         font-weight: 600;
         color: var(--secondary-text-color);
+        
       }
       .navbar__item {
         position: relative;
@@ -95,6 +97,8 @@ $breakpoint-tablet: 1024px;
     background-color: var(--primary-color);
     color: var(--tertiary-text-color);
     border-radius: 40px;
+    text-decoration: none;
+
     &:hover {
       background-color: var(--tertiary-color);
     }

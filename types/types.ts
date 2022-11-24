@@ -120,3 +120,7 @@ export interface IModalProp {
 export interface ILayoutProps {
   children: JSX.Element;
 }
+
+export interface IResultProps {
+  setResult: (value: Array<DetailsProps>) => void;
+}
