@@ -1,0 +1,32 @@
+.btn_container {
+  display: flex;
+  flex-direction: "row";
+  align-items: center;
+  padding: 30px 50px;
+  .btn {
+    color: #fff;
+    font-size: 0.8rem;
+    width: 90px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background-color: #787878;
+    opacity: 70%;
+    border-radius: 4px;
+    padding: 6px 15px;
+    margin: 0 10px;
+  }
+  .btn:hover {
+    background-color: #fff;
+  }
+
+  .like_active {
+    background-color: #ff0063;
+    opacity: 100%;
+  }
+
+  .dislike_active {
+    background-color: black;
+    opacity: 100%;
+  }
+}

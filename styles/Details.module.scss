@@ -1,0 +1,37 @@
+.title_course {
+  background-image: linear-gradient(to bottom, #2980b9, #2c3e50);
+  height: 500px;
+  padding: 20px 150px;
+  width: 85%;
+  border-radius: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .contain {
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .first_title {
+    color: white;
+  }
+  .second_title {
+    color: white;
+    text-align: center;
+  }
+  .enroll {
+    margin-top: 12px;
+  }
+  .course_name {
+    font-size: 45px;
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .second_containter {
+    margin-top: 25px;
+  }
+}
