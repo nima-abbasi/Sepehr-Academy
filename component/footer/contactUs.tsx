@@ -3,8 +3,8 @@ import { useForm } from 'react-hook-form'
 import React, { useState, useEffect } from "react";
 import { ContactUsProps } from '../../types/types';
 import ContactUsAPI from '../../pages/api/contactUsApi/contactUsAPI';
-import emailImg from "../../assets/images/email.png"
-import addressImg from "../../assets/images/address.png"
+import emailImg from "../../public/email.png"
+import addressImg from "../../public/address.png"
 
 const ContactUsForm: NextPage = () => {
    

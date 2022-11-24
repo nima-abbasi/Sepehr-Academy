@@ -1,16 +1,22 @@
-//import Head from 'next/head'
-//import Image from 'next/image'
-//import styles from '../styles/Home.module.css'
-import RegisterForm from "../components/register/register"
-import "bootstrap/dist/css/bootstrap.min.css"
-import ResetPassWordForm from "../components/login/resetPassword/resetPassword"
-import LoginForm from "../components/login/login/login"
-import AllCoursesDisplay from "../components/Allcourses/AllcoursesDisplay"
-import ContactUsForm from "../components/Footer/contactUs"
+import { useState } from "react";
+import Head from "next/head";
+
+import styles from "../styles/Home.module.css";
+
+import { DetailsProps } from "../types/types";
+
+import SearchBox from "./search";
 
 export default function Home() {
+  const [searchResult, setSearchResult] = useState<Array<DetailsProps>>();
   return (
-    <div className="container">
+    <div className={styles.container}>
+      <Head>
+        <title>Sepehr Academy</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
+      <SearchBox setResult={setSearchResult} />
+
     </div>
-  )
+  );
 }

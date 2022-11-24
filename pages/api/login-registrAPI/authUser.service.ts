@@ -1,13 +1,10 @@
 import Axios from 'axios'
-import { UserInfo } from "../../types/types";
-import { LoginInfo } from "../../types/types";
-//import { UserName } from "../../types/types";
-
-
-
+import { UserInfo } from "../../../types/types";
+import { LoginInfo } from "../../../types/types";
+import { URL } from '../url';
 
 const singUpAPI = ({ fullName, email, password, phoneNumber, birthDate, nationalId, profile }: UserInfo) =>
-  Axios.post(API_URL + 'auth/register', {
+  Axios.post( `${URL}auth/register`, {
     fullName,
     email,
     password,
@@ -25,7 +22,7 @@ const singUpAPI = ({ fullName, email, password, phoneNumber, birthDate, national
  
 
  const loginAPI = ({ email, password }: LoginInfo) =>{
-  Axios.post(API_URL +'auth/login', {
+  Axios.post(`${URL}auth/login`, {
     email,
     password,
   })

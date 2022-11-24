@@ -1,6 +1,6 @@
 import {createAsyncThunk } from "@reduxjs/toolkit";
 import { setMessage } from "../message";
-import authService from "../../../pages/api/authUser.service";
+import authService from "../../../pages/api/login-registrAPI/authUser.service";
 import { UserInfo } from "../../../types/types"; 
 
 
