@@ -42,6 +42,7 @@ export interface LessonInfo {
   topics: string[];
   lessonName: string;
   description: string;
+  image: string;
 }
 
 export interface CourseProps {
@@ -55,13 +56,14 @@ export interface CourseListInfo {
   teacher: TeacherInfo;
   course: CourseInfo;
   lesson: LessonInfo;
+  student?: string[];
   cost: string;
   id: string;
   title: string;
 }
 
 export interface CourseListProps {
-  courseList: CourseProps[];
+  courseList: CourseListInfo[];
 }
 
 export interface LikeProps {
@@ -88,33 +90,33 @@ export interface ResetPasswordProps {
 }
 
 export interface StudentInfo {
-  id: string;
+  _id: string;
   email: string;
   fullName: string;
   profile: string;
 }
+
 export interface DetailsProps {
   teacher: TeacherInfo;
   students: StudentInfo[];
   lesson: LessonInfo;
   cost: string;
-  id: string;
+  _id: string;
   title: string;
   capacity: string;
   endDate: string;
   startDate: string;
 }
-export interface IResultProps {
-  setResult: (value: Array<DetailsProps>) => void;
-}
-export interface ILayoutProps {
-  children: JSX.Element;
-}
+
 export interface IAddProps {
   course: DetailsProps;
 }
+
 export interface IModalProp {
   close: (value: boolean) => void;
   course: DetailsProps;
 }
 
+export interface ILayoutProps {
+  children: JSX.Element;
+}

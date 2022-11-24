@@ -2,21 +2,21 @@ import React, { useEffect, useState } from "react";
 
 import styles from "./Enrollment.module.scss";
 
-import { StudentInfo, IAddProps } from "../../../types/types";
+import { IAddProps, StudentInfo } from "../../../types/types";
 import { AddStudentToCourse } from "../../../pages/api/services/addStudent";
 
 const Enrollment = ({ course }: IAddProps): JSX.Element => {
   const [registered, setRegistered] = useState<boolean>(false);
   const [message, setMessage] = useState<string>("");
   const user = JSON.parse(localStorage.getItem("user") || "{}");
-  const userID = user?.student._id;
+  const userID = user?.student.id;
 
-  const courseID: string | undefined = course?.id;
+  const courseID: string | undefined = course?._id;
 
   useEffect(
     () =>
       setRegistered(
-        course?.students.some((student: StudentInfo) => student.id === userID)
+        course?.students.some((student: StudentInfo) => student._id === userID)
       ),
     []
   );

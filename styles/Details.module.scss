@@ -1,0 +1,37 @@
+.titleCourse {
+  background-image: linear-gradient(to bottom, #2980b9, #2c3e50);
+  height: 500px;
+  padding: 20px 150px;
+  width: 85%;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contain {
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.firstTitle {
+  color: white;
+}
+.secondTitle {
+  color: white;
+  text-align: center;
+}
+.enroll {
+  margin-top: 12px;
+}
+.courseName {
+  font-size: 45px;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.secondContainter {
+  margin-top: 25px;
+}
