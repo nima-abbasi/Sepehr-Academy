@@ -239,6 +239,12 @@ const RegisterForm: NextPage = () => {
           Login
         </button>
       </div>
+      <button
+        type="button"
+        className="btn btn-link"
+      >
+        {loader ? <ThreeDots fill="#fff" height=".5em" /> : "login"}
+      </button>
     </div>
   );
 };
