@@ -1,0 +1,52 @@
+$flex: flex; 
+$flexRow: row;
+$flexColumn: column;
+$flexBasis: 50%;
+$siteColor: #2c3e50;
+$paddingLeft: 20px;
+
+.contact{
+    display: $flex;
+    flex-direction: $flexRow;
+    justify-content: center;
+    margin-top: 50px;
+    width: 100%;
+
+    .contact_form{
+        display: $flex;
+        flex-direction: $flexRow;
+        margin-top: 100px;
+        gap: 20px;
+        flex-basis: $flexBasis;
+    }
+
+    .contact_Info{
+        display: $flex;
+        flex-direction: $flexColumn;
+        gap: 20px;
+        background-color: $siteColor;
+        border: none;
+        flex-basis: $flexBasis;
+        margin-top: 100px;
+    }
+}
+
+.info__top{
+    gap: 5px;
+    padding-left: $paddingLeft;
+    padding-top: 30px;
+}
+
+.info__bot{
+    gap: 5px;
+    padding-left: $paddingLeft;
+} 
+
+.pInfo{
+    padding-left: $paddingLeft;
+    color: white;
+}
+
+.contact__Form{
+    width: 100%;
+}
