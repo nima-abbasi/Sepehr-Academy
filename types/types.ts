@@ -122,5 +122,9 @@ export interface ILayoutProps {
 }
 
 export interface IResultProps {
-  setResult: (value: Array<DetailsProps>) => void;
+  setResult: (value: CourseListProps) => void;
+}
+
+export interface IAllCoursesProps {
+  courses: Array<CourseListInfo>;
 }

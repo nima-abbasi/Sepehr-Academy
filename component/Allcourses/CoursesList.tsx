@@ -6,7 +6,6 @@ const CourseList: React.FunctionComponent<CourseListProps> = ({
   courseList,
 }) => {
   const date = Date.now().toString();
-  console.log(courseList);
 
   return (
     <React.Fragment>
@@ -17,7 +16,7 @@ const CourseList: React.FunctionComponent<CourseListProps> = ({
             cost={el.cost}
             id={el._id}
             title={el.title}
-            key={date}
+            key={el._id}
           />
         );
       })}
@@ -25,4 +24,4 @@ const CourseList: React.FunctionComponent<CourseListProps> = ({
   );
 };
 
-export default CourseList;
+export default React.memo(CourseList);

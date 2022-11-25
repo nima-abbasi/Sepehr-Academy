@@ -13,7 +13,6 @@ const AddCourse: React.FC<CourseProps> = ({ description, cost, id, title }) => {
     like: 0,
     dislike: 0,
   });
-  console.log(id);
 
   useEffect(() => {
     LikeCountAPI(id).then((res) => {
