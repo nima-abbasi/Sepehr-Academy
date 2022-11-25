@@ -48,7 +48,7 @@ export interface LessonInfo {
 export interface CourseProps {
   description: string;
   cost: string;
-  _id: string;
+  id: string;
   title: string;
 }
 
@@ -58,7 +58,7 @@ export interface CourseListInfo {
   lesson: LessonInfo;
   student?: string[];
   cost: string;
-  __id: string;
+  _id: string;
   title: string;
 }
 

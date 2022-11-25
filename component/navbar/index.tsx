@@ -76,11 +76,11 @@ const Navbar = (): JSX.Element => {
           </Link>
           <Link
             className={`${styles.navbar__link} ${styles.navbar__item}`}
-            href="/#about"
+            href="/#contact"
             onClick={toggleNavBar}
             scroll={false}
           >
-            About
+            Contact
           </Link>
         </nav>
       </div>
