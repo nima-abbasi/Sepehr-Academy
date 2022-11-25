@@ -1,7 +1,7 @@
 import React from "react";
 import AddCourse from "./Addcourse";
 import { CourseListProps } from "../../types/types";
-
+//
 const CourseList: React.FunctionComponent<CourseListProps> = ({
   courseList,
 }) => {

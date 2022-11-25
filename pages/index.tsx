@@ -7,6 +7,7 @@ import { DetailsProps } from "../types/types";
 
 import SearchBox from "./search";
 import AllCoursesDisplay from "./AllcoursesDisplay";
+import ContactUsForm from "./contactUs";
 
 export default function Home() {
   const [searchResult, setSearchResult] = useState<Array<DetailsProps>>();
@@ -18,6 +19,7 @@ export default function Home() {
       </Head>
       <SearchBox setResult={setSearchResult} />
       <AllCoursesDisplay />
+      <ContactUsForm/>
     </div>
   );
 }
