@@ -3,7 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import AddToCourse from "../component/addStudent/AddToCourse";
 import Survey from "../component/survey";
 import styles from "../styles/Details.module.scss";
-import {DetailsProps} from "../types/types";
+import { DetailsProps } from "../types/types";
 
 export interface ICourse {
   capacity: number;
@@ -81,7 +81,7 @@ const CoursDetail = ({ Details }: Props) => {
           </Col>
         </Row>
       </Container>
-      <Container className={styles.secondContainter}>
+      {/* <Container className={styles.secondContainter}>
         <Row>
           <Col>
             <h2>Course professors</h2>
@@ -90,6 +90,20 @@ const CoursDetail = ({ Details }: Props) => {
             <p>{teacher.email}</p>
           </Col>
           <Col>
+            <Survey detailId={id} />
+          </Col>
+        </Row>
+      </Container> */}
+      <Container className={styles.container}>
+        <Row>
+          <Col md={6}>
+            {" "}
+            <h2>Course professors</h2>
+            <h4>{teacher.profile}</h4>
+            <h4>{teacher.fullName}</h4>
+            <p>{teacher.email}</p>
+          </Col>
+          <Col md={6}>
             <Survey detailId={id} />
           </Col>
         </Row>
