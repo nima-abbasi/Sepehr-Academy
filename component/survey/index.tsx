@@ -2,18 +2,25 @@ import axios from "axios";
 import React from "react";
 import { useState } from "react";
 import { AiTwotoneLike, AiTwotoneDislike } from "react-icons/ai";
-import styles from "./survey.module.scss";
+import styles from "./Survey.module.scss";
 
-const Survey = (detailId: any) => {
+interface Props {
+  detailId: string;
+}
+
+const Survey = (detailId: Props) => {
   const [likeCount, setLikeCount] = useState(0);
   const [dislikeCount, setDislikeCount] = useState(0);
   const [activeBtn, setActiveBtn] = useState("none");
+  // const user = JSON.parse(localStorage.getItem("user") || "{}");
+  // const userID = user?.student.id;
+  const detail = detailId;
 
   const handleLikeClick = () => {
     axios
       .post("http://querateam1.herokuapp.com/api/course/like", {
-        courseId: "detailI.detailId",
-        userId: "637b7e5d40cd5300231b3cca",
+        courseId: detail.detailId,
+        userId: "628284559a4090194c4c94bb",
       })
       .then((response) => {
         console.log(response.data);
@@ -41,8 +48,8 @@ const Survey = (detailId: any) => {
   const handleDisikeClick = () => {
     axios
       .post("http://querateam1.herokuapp.com/api/course/dislike", {
-        courseId: "detailI.detailId",
-        userId: "637b7e5d40cd5300231b3cca",
+        courseId: detail.detailId,
+        userId: "628284559a4090194c4c94bb",
       })
       .then((response) => {
         console.log(response.data);
@@ -68,11 +75,8 @@ const Survey = (detailId: any) => {
 
   return (
     <>
-      <div className={styles.btnContainer}>
-        <button
-          className={`btn ${activeBtn === "dislike" ? "dislike-active" : ""}`}
-          onClick={handleLikeClick}
-        >
+      {/* <div className={""}>
+        <button className={styles.likeActive} onClick={handleLikeClick}>
           <span className="material-symbols-rounded">
             {" "}
             <AiTwotoneLike />
@@ -85,6 +89,33 @@ const Survey = (detailId: any) => {
           onClick={handleDisikeClick}
         >
           <span className="material-symbols-rounded">
+            <AiTwotoneDislike />
+          </span>
+          Dislike
+        </button>
+      </div> */}
+      <div className="btn_container">
+        <button
+          className={`btn_like_deslike ${
+            activeBtn === "like" ? "like_active" : ""
+          }`}
+          onClick={handleLikeClick}
+        >
+          <span>
+            {" "}
+            <AiTwotoneLike />
+          </span>
+          Like
+        </button>
+
+        <button
+          className={`btn_like_deslike ${
+            activeBtn === "dislike" ? "dislike_active" : ""
+          }`}
+          onClick={handleDisikeClick}
+        >
+          <span>
+            {" "}
             <AiTwotoneDislike />
           </span>
           Dislike
