@@ -10,6 +10,7 @@ $breakpoint-tablet: 1024px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  z-index: 2;
   .navbar__left {
     display: flex;
     gap: 30px;
@@ -30,7 +31,6 @@ $breakpoint-tablet: 1024px;
       .navbar__link {
         font-weight: 600;
         color: var(--secondary-text-color);
-        
       }
       .navbar__item {
         position: relative;
@@ -71,7 +71,6 @@ $breakpoint-tablet: 1024px;
         background-color: var(--tertiary-text-color);
         transition: 1s;
         transform: translateY(-100vh);
-        z-index: 2;
       }
     }
     .navbar__responsive {
