@@ -1,9 +1,14 @@
 $genericColor1: #2980b9;
 $genericColor2: #2c3e50;
 
-.register{
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    margin-top:20vh;
+.register {
+  width: 390px;
+}
+.styles {
+  margin-top: 150px;
+}
+.buttons {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
 }

@@ -62,7 +62,13 @@ const LoginForm: NextPage = () => {
   return (
     <div
       className="container"
-      style={{ display: "flex", flexDirection: "column", gap: "20px", marginTop:"20vh" }}
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        gap: "20px",
+        marginTop: "20vh",
+        width: "390px",
+      }}
     >
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="d-flex flex-column bd-highlight mb-3">
@@ -122,13 +128,13 @@ const LoginForm: NextPage = () => {
         </button>
       </form>
       <div className="d-flex justify-content-around">
-        <button type="button" onClick={handleClick} className="btn btn-link">
+        <button type="button" onClick={handleClick} className="btn ">
           Forget PassWord
         </button>
         {send && (
           <ModalWrapper close={setSend} component={<ForgetPassWordForm />} />
         )}
-        <button type="button" onClick={handleClick} className="btn btn-link">
+        <button type="button" onClick={handleClick} className="btn ">
           Reset Password
         </button>
         {send && (

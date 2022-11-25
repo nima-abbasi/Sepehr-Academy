@@ -7,6 +7,7 @@ import likeImg from "../../public/like.png";
 import dislikeImg from "../../public/dislike.png";
 import styles from "./AddCouresStyle.module.scss";
 import Link from "next/link";
+import { AiTwotoneLike, AiTwotoneDislike } from "react-icons/ai";
 
 const AddCourse: React.FC<CourseProps> = ({ description, cost, id, title }) => {
   const [like, setLike] = useState<LikeCountInfo>({
@@ -22,22 +23,23 @@ const AddCourse: React.FC<CourseProps> = ({ description, cost, id, title }) => {
 
   return (
     <Link href={`/${id}`}>
-      <div className="card" style={{ width: "18rem" }}>
-        <div className={styles.course}>
-          <h1 style={{ color: "white" }}>{title.slice(0, 2)}</h1>
-        </div>
-        <div className="card-body">
+      <div className={styles.card}>
+        <h1 className={styles.course} style={{ color: "white" }}>
+          {title.slice(0, 2)}
+        </h1>
+
+        <div className={`card-body ${styles.body}`}>
           <h5 className="card-title">{title}</h5>
           <p className="card-text">{description}</p>
           <p className="card-text text-muted">${cost}</p>
           <div className="d-flex justify-content-between">
             <div className="d-flex justify-content-start">
+              <AiTwotoneLike />
               <span>{like.like}</span>
-              <img src={likeImg.src} height="25px" width="25px" />
             </div>
             <div className="d-flex justify-content-start">
+              <AiTwotoneDislike />
               <span>{like.dislike}</span>
-              <img src={dislikeImg.src} height="25px" width="25px" />
             </div>
           </div>
         </div>

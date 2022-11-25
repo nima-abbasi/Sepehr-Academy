@@ -93,10 +93,6 @@ const ContactUsForm: NextPage = () => {
                 value={formValue.text}
                 {...register("text", {
                   required: "please inter text",
-                  minLength: {
-                    value: 8,
-                    message: "text must be at least 100 character",
-                  },
                 })}
                 onChange={(e) =>
                   setFormValue({ ...formValue, text: e.target.value })

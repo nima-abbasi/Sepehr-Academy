@@ -9,6 +9,7 @@ import { UserInfo, AppDispatch } from "../types/types";
 import { clearMessage } from "../store/slices/message";
 import { singUp } from "../store/slices/actions/sing-up.action";
 import styles from "../styles/registerStyle.module.scss";
+import Link from "next/link";
 
 const RegisterForm: NextPage = () => {
   const router = useRouter();
@@ -226,25 +227,19 @@ const RegisterForm: NextPage = () => {
             )}
           </div>
         </div>
-        <button
-          style={{ backgroundColor: "#2c3e50", border: "none" }}
-          type="submit"
-          className="btn btn-primary mt-4 float-start"
-        >
-          {loader ? <ThreeDots fill="#fff" height=".5em" /> : "sing up"}
-        </button>
+        <div className={styles.buttons}>
+          <button
+            style={{ backgroundColor: "#2c3e50", border: "none" }}
+            type="submit"
+            className="btn btn-primary mt-4 float-start"
+          >
+            {loader ? <ThreeDots fill="#fff" height=".5em" /> : "sing up"}
+          </button>
+          <Link href="/login" className={styles.login}>
+            LogIn
+          </Link>
+        </div>
       </form>
-      <div className="d-flex justify-content-around">
-        <button type="button" className="btn btn-link">
-          Login
-        </button>
-      </div>
-      <button
-        type="button"
-        className="btn btn-link"
-      >
-        {loader ? <ThreeDots fill="#fff" height=".5em" /> : "login"}
-      </button>
     </div>
   );
 };

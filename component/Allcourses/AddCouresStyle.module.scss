@@ -1,9 +1,20 @@
-.course{
-    background-color: #2c3e50;
-    height: 100px;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+.card {
+  width: 18rem;
+  border-radius: 20px !important;
+}
+.course {
+  background-color: #2c3e50;
+  height: 100px;
+  width: 80;
+  display: flex;
+  padding: 100px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.card:hover {
+  box-shadow: 0px 13px 48px 6px rgb(0, 0, 0, 0.3);
+}
+.body {
+  padding: 10px;
 }
