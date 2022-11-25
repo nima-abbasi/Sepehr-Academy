@@ -85,25 +85,6 @@ const Survey = (detailId: Props) => {
 
   return (
     <>
-      {/* <div className={""}>
-        <button className={styles.likeActive} onClick={handleLikeClick}>
-          <span className="material-symbols-rounded">
-            {" "}
-            <AiTwotoneLike />
-          </span>
-          Like
-        </button>
-
-        <button
-          className={`btn ${activeBtn === "dislike" ? "dislike-active" : ""}`}
-          onClick={handleDisikeClick}
-        >
-          <span className="material-symbols-rounded">
-            <AiTwotoneDislike />
-          </span>
-          Dislike
-        </button>
-      </div> */}
       <div className={styles.btn_container}>
         <button
           className={`${styles.btn_like_deslike} ${

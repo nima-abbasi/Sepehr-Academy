@@ -36,17 +36,7 @@ export interface LessonInfo {
   description: string;
   image: string;
 }
-// export interface DetailsProps {
-//   teacher: TeacherInfo;
-//   students: StudentInfo;
-//   lesson: LessonInfo;
-//   cost: string;
-//   _id: string;
-//   title: string;
-//   capacity: string;
-//   endDate: string;
-//   startDate: string;
-// }
+
 interface Props {
   Details: DetailsProps;
 }
@@ -81,19 +71,7 @@ const CoursDetail = ({ Details }: Props) => {
           </Col>
         </Row>
       </Container>
-      {/* <Container className={styles.secondContainter}>
-        <Row>
-          <Col>
-            <h2>Course professors</h2>
-            <h4>{teacher.profile}</h4>
-            <h4>{teacher.fullName}</h4>
-            <p>{teacher.email}</p>
-          </Col>
-          <Col>
-            <Survey detailId={id} />
-          </Col>
-        </Row>
-      </Container> */}
+
       <Container className={styles.container}>
         <Row>
           <Col md={6}>
