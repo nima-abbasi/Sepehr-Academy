@@ -1,20 +1,22 @@
-
 import { useState } from "react";
-//import Head from "next/head";
+import Head from "next/head";
 
-//import styles from "../styles/Home.module.css";
+import styles from "../styles/Home.module.css";
 
-//import { DetailsProps } from "../types/types";
+import { DetailsProps } from "../types/types";
 
-import ContactUsForm from "../component/footer/contactUs";
-
-//import SearchBox from "./search";
+import SearchBox from "./search";
 
 export default function Home() {
   const [searchResult, setSearchResult] = useState<Array<DetailsProps>>();
   return (
-    <div className="container" >
-      <ContactUsForm/>
+    <div className={styles.container}>
+      <Head>
+        <title>Sepehr Academy</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
+      <SearchBox setResult={setSearchResult} />
+
     </div>
   );
 }
