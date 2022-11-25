@@ -33,12 +33,12 @@ export interface TeacherInfo {
   email: string;
   fullName: string;
   profile: string;
-  id: string;
+  _id: string;
 }
 
 export interface LessonInfo {
   startDate: string;
-  id: string;
+  _id: string;
   topics: string[];
   lessonName: string;
   description: string;
@@ -48,7 +48,7 @@ export interface LessonInfo {
 export interface CourseProps {
   description: string;
   cost: string;
-  id: string;
+  _id: string;
   title: string;
 }
 
@@ -58,7 +58,7 @@ export interface CourseListInfo {
   lesson: LessonInfo;
   student?: string[];
   cost: string;
-  id: string;
+  __id: string;
   title: string;
 }
 
@@ -67,7 +67,7 @@ export interface CourseListProps {
 }
 
 export interface LikeProps {
-  courseId: string;
+  course_Id: string;
 }
 
 export interface LikeCountInfo {

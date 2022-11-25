@@ -94,7 +94,7 @@ const Survey = (detailId: Props) => {
           Dislike
         </button>
       </div> */}
-      <div className="btn_container">
+      <div className="">
         <button
           className={`btn_like_deslike ${
             activeBtn === "like" ? "like_active" : ""
