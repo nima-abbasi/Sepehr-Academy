@@ -4,9 +4,10 @@ import styles from "./modalStyle.module.scss";
 export interface IModalProp {
     close: (value: boolean) => void;
     component: any;
+    title?: string;
 }
 
-const ModalWrapper = ({ close, component}: IModalProp): JSX.Element => {
+const ModalWrapper = ({ close, component, title}: IModalProp): JSX.Element => {
   return (
     <div className={styles.modal}>
       <div className={styles.modal__box}>

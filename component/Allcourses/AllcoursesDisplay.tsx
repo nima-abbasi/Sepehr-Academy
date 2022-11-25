@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import AllCoursesAPI from "../../pages/api/AllCoursesAPI/AllcoursesAPI"
-import { CourseProps, CourseListInfo, CourseListProps } from "../../types/types"
+import { CourseListInfo } from "../../types/types"
 import CourseList from "./CoursesList"
 
 const courseStyle ={
@@ -13,7 +13,6 @@ const courseStyle ={
   gap:"30px",
   justifyContent:"center",
   alignItems: "center"
-
 }
 
 export const isBrowser = (): boolean => {
@@ -29,7 +28,6 @@ const AllCoursesDisplay = () => {
 
 const [course, setCourse] = useState<CourseListInfo[]>([])
 
-
 AllCoursesAPI()
 .then((response: any) => {
   const register = response.data.result
@@ -37,10 +35,6 @@ AllCoursesAPI()
   localStorage.setItem("allCourses", JSON.stringify(register));
   return response.data;
 });
-
-
-
-
 
 useEffect(() => {
 const data = JSON.parse(nextLocalStorage()?.getItem("allCourses") ||'""')

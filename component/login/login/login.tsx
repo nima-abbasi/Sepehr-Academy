@@ -99,9 +99,9 @@ const LoginForm: NextPage = () => {
             </button>
         </form>
         <div className="d-flex justify-content-around">
-            <button type="button" onClick={handleClick} style={{backgroundColor: "#2c3e50", border:"none"}} className="btn btn-primary " >Forget PassWord</button> 
+            <button type="button" onClick={handleClick}  className="btn btn-link" >Forget PassWord</button> 
                 {send && <ModalWrapper close={setSend} component={<ForgetPassWordForm/>} />}
-            <button type="button" onClick={handleClick} style={{backgroundColor: "#2c3e50", border:"none"}} className="btn btn-primary" >Reset Password</button> 
+            <button type="button" onClick={handleClick}  className="btn btn-link" >Reset Password</button> 
                 {send && <ModalWrapper close={setSend} component={<ResetPassWordForm/>} />}
          </div>
         </div>

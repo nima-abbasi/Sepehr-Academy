@@ -6,7 +6,7 @@ import { AppDispatch } from "../../types/types"
 import React, { useState, useEffect  } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { singUp } from '../../store/slices/actions/sing-up.action';
-import ForgetPassWordForm from "../login/forgetPassword/forgetPassword"
+import styles from "./registerStyle.module.scss"
 
 const RegisterForm: NextPage = () => {
     const dispatch = useDispatch<AppDispatch>();
@@ -53,7 +53,7 @@ const RegisterForm: NextPage = () => {
    
   
     return (
-        <div className="container" style={{display: "flex", flexDirection:"column", gap: "20px"}}>
+        <div className={`container ${styles.register}`}>
           <form onSubmit={handleSubmit(onSubmit)}>
             <div className="d-flex flex-column bd-highlight mb-3">
                 <div className="mb-3">
