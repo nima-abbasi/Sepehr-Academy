@@ -18,11 +18,12 @@ const SearchBox = ({ setResult }: IResultProps): JSX.Element => {
 
   const handleSearch = () => {
     AllCoursesAPI().then((response) => setCourses(response.data.result));
-    const filtered = courses.filter((course: DetailsProps) => {
+    const filtered:DetailsProps[] = courses.filter((course: DetailsProps) => {
       return searchInput === ""
         ? course
         : course.title.toLowerCase().includes(searchInput.toLowerCase());
     });
+    
     setResult(filtered);
   };
 

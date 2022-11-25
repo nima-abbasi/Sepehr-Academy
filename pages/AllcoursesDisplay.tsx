@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import AllCoursesAPI from "./api/AllCoursesAPI/AllcoursesAPI";
-import { CourseListInfo, IAllCoursesProps } from "../types/types";
+import { DetailsProps, IAllCoursesProps } from "../types/types";
 import CourseList from "../component/Allcourses/CoursesList";
 
 const courseStyle = {
@@ -25,20 +25,18 @@ export const nextLocalStorage = (): Storage | void => {
   }
 };
 const AllCoursesDisplay = ({ courses }: IAllCoursesProps) => {
-  const [course, setCourse] = useState<CourseListInfo[]>([]);
+  const [course, setCourse] = useState<DetailsProps[]>([]);
   useEffect(() => {
     AllCoursesAPI().then((response: any) => {
       const register = response.data.result;
-      // localStorage.setItem("allCourses", JSON.stringify(register));
-      setCourse(register);
+      setCourse(register);      
       return response.data;
     });
   }, []);
+
   useEffect(() => {
-    // const data = JSON.parse(nextLocalStorage()?.getItem("allCourses") || '""');
     if (typeof courses != "undefined" && courses.length > 0) {
       setCourse(courses);
-      console.log(courses);
     } else {
       course;
     }

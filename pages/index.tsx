@@ -3,16 +3,14 @@ import Head from "next/head";
 
 import styles from "../styles/Home.module.css";
 
-import { CourseListProps } from "../types/types";
+import { DetailsProps } from "../types/types";
 
 import SearchBox from "./search";
 import AllCoursesDisplay from "./AllcoursesDisplay";
 import ContactUsForm from "./contactUs";
 
 export default function Home() {
-  const [searchResult, setSearchResult] = useState<
-    CourseListProps | undefined
-  >();
+  const [searchResult, setSearchResult] = useState<Array<DetailsProps>>([]);
   return (
     <div className={styles.container}>
       <Head>

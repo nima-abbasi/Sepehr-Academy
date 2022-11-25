@@ -63,7 +63,7 @@ export interface CourseListInfo {
 }
 
 export interface CourseListProps {
-  courseList: CourseListInfo[];
+  courseList: DetailsProps[];
 }
 
 export interface LikeProps {
@@ -122,9 +122,9 @@ export interface ILayoutProps {
 }
 
 export interface IResultProps {
-  setResult: (value: CourseListProps) => void;
+  setResult: (value: DetailsProps[]) => void;
 }
 
 export interface IAllCoursesProps {
-  courses: Array<CourseListInfo>;
+  courses: Array<DetailsProps>;
 }
