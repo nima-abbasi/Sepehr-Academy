@@ -14,16 +14,16 @@ const Navbar = (): JSX.Element => {
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      if (localStorage.getItem("user") === null) {
-        setLogin(false);
-      } else {
+      if (localStorage.getItem("user") !== null) {
         setLogin(true);
         setUsername(
           JSON.parse(localStorage.getItem("user") || "{}")?.student.fullName
         );
+      } else {
+        setLogin(false);
       }
     }
-  }, []);
+  });
 
   const toggleNavBar = () => {
     navRef.current?.classList.toggle(`${styles.navbar__responsive}`);
