@@ -9,7 +9,7 @@ const Enrollment = ({ course }: IAddProps): JSX.Element => {
   const [registered, setRegistered] = useState<boolean>(false);
   const [message, setMessage] = useState<string>("");
   const user = JSON.parse(localStorage.getItem("user") || "{}");
-  const userID = user?.student.id;
+  const userID = user?.student._id;
 
   const courseID: string | undefined = course?._id;
 
